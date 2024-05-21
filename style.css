@@ -1,0 +1,80 @@
+body {
+  background-color: black;
+  margin: 0;
+}
+.parent {
+  display: flex; /* Define un contenedor flex */
+  justify-content: center; /* Centra los elementos hijos horizontalmente */
+  align-items: center; /* Centra los elementos hijos verticalmente */
+  height: 100vh; /* Altura del contenedor igual a la altura de la ventana */
+  background-color: black;
+}
+
+section {
+  display: flex; /* Flexbox para organizar elementos */
+  width: 900px; /* Ancho fijo del contenedor */
+  height: 430px; /* Altura fija del contenedor */
+  border: 6px solid black; /* Borde sólido de 6 píxeles de ancho y negro */
+}
+
+/* Estiliza las imágenes dentro del contenedor */
+section img {
+  width: 0px; /* Ancho inicial de las imágenes */
+  flex-grow: 1; /* Permite que las imágenes crezcan para ocupar el espacio disponible */
+  object-fit: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+  opacity: 0.8; /* Opacidad inicial de las imágenes */
+  transition: 1s ease; /* Transición suave para los cambios de tamaño y opacidad */
+}
+
+/* Cambia el tamaño y la opacidad de las imágenes al pasar el cursor sobre ellas */
+section img:hover {
+  cursor: crosshair; /* Cambia el cursor a un cursor de mira */
+  width: 320px; /* Cambia el ancho de la imagen al hacer hover */
+  opacity: 1; /* Aumenta la opacidad de la imagen al hacer hover */
+  filter: contrast(120%); /* Ajusta el contraste de la imagen al hacer hover */
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  position: relative;
+  font-size: 6em;
+  letter-spacing: 15px;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  -webkit-box-reflect: below 1px
+    linear-gradient(transparent, rgba(78, 72, 72, 0.533));
+  line-height: 0.7em;
+  outline: none;
+  animation: animate 5s linear infinite;
+}
+@keyframes animate {
+  0%,
+  18%,
+  20%,
+  50.1%,
+  60%,
+  65.1%,
+  80%,
+  90.1%,
+  92% {
+    color: #0e3742;
+    text-shadow: none;
+  }
+  18.1%,
+  20.1%,
+  30%,
+  50%,
+  60.1%,
+  65%,
+  80.1%,
+  90%,
+  92.1%,
+  100% {
+    color: #fff;
+    text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4,
+      0 0 80px #03bcf4, 0 0 160px #03bcf4;
+  }
+}
